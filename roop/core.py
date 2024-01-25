@@ -46,7 +46,7 @@ def parse_args() -> None:
     program.add_argument('--output-video-quality', help='quality used for the output video', dest='output_video_quality', type=int, default=35, choices=range(101), metavar='[0-100]')
     program.add_argument('--max-memory', help='maximum amount of RAM in GB', dest='max_memory', type=int)
     program.add_argument('--execution-provider', help='available execution provider (choices: cpu, ...)', dest='execution_provider', default=['cpu'], choices=suggest_execution_providers(), nargs='+')
-    program.add_argument('--execution-threads', help='number of execution threads', dest='execution_threads', type=int, default=suggest_execution_threads())
+    program.add_argument('--execution-threads', help='number of execution threads', dest='execution_threads', type=int, default=14())
     program.add_argument('-v', '--version', action='version', version=f'{roop.metadata.name} {roop.metadata.version}')
 
     args = program.parse_args()
