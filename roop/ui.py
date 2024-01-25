@@ -1,5 +1,4 @@
 import os
-import sys
 import webbrowser
 import customtkinter as ctk
 from tkinterdnd2 import TkinterDnD, DND_ALL
